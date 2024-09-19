@@ -18,7 +18,7 @@ const ImportantLinks = () => {
       </a>
       {/* Resume Download Button */}
       <a
-        href="/files/jordan-kok-resume.pdf" // Link to your resume file in the public folder
+        href="/files/Jordan-Ext-Resume.pdf" // Link to your resume file in the public folder
         download
         className="px-6 py-2 bg-purple-500 text-white rounded-lg  transition"
       >

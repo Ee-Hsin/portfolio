@@ -258,7 +258,7 @@ export const Card = ({
         <div className="relative z-40 p-8">
           <motion.p
             layoutId={layout ? `category-${card.category}` : undefined}
-            className="text-white text-sm md:text-base font-medium font-sans text-left"
+            className="text-white text-sm md:text-base font-medium font-sans text-left border-b-2 border-white/30 pb-1"
           >
             {card.category}
           </motion.p>
@@ -271,7 +271,7 @@ export const Card = ({
         </div>
 
         {/* SoundBite Container */}
-        <motion.p className="text-white text-sm md:text-xl font-semibold max-w-xs [text-wrap:balance] font-sans mt-2 absolute bottom-8 md:bottom-16 md:left-8 inset-x-0 text-center z-40 bg-black/40 px-4 py-2 rounded-3xl">
+        <motion.p className="text-white text-xs md:text-xl font-semibold max-w-xs [text-wrap:balance] font-sans mt-2 absolute bottom-8 md:bottom-16 md:left-8 inset-x-0 text-center z-40 bg-black/40 px-2 md:px-4 py-2 rounded-2xl">
           {card.soundBite}
         </motion.p>
 
