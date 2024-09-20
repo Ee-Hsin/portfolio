@@ -25,10 +25,13 @@ interface CarouselProps {
 type Card = {
   src: string
   title: string
+  date: string
+  location: string
   category: string
   soundBite: string
   content: React.ReactNode
   linkedinLink?: string
+  techStack?: React.ReactNode
 }
 
 export const CarouselContext = createContext<{
@@ -184,7 +187,7 @@ export const Card = ({
 
     window.addEventListener("keydown", onKeyDown)
     return () => window.removeEventListener("keydown", onKeyDown)
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open])
 
   useOutsideClick(containerRef, () => handleClose())
@@ -230,13 +233,13 @@ export const Card = ({
                 {card.category}{" "}
                 {card.linkedinLink ? (
                   <a
-                  href={card.linkedinLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="ml-1"
-                >
-                  <FaLinkedin />
-                </a>
+                    href={card.linkedinLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="ml-1"
+                  >
+                    <FaLinkedin />
+                  </a>
                 ) : null}
               </motion.p>
               <motion.p
@@ -253,35 +256,46 @@ export const Card = ({
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
         onClick={handleOpen}
-        className="rounded-3xl bg-neutral-900 h-80 w-56 md:h-[40rem] md:w-96 overflow-hidden flex flex-col items-start justify-start relative z-10"
+        className="rounded-3xl bg-neutral-900 border border-white/[0.2] h-60 md:h-full w-[26rem] overflow-hidden flex flex-col items-start justify-start relative z-10"
       >
         <div className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
-        <div className="relative z-40 p-8">
+        <div className="relative z-40 px-8 pt-8">
           <motion.p
             layoutId={layout ? `category-${card.category}` : undefined}
             className="text-white text-sm md:text-base font-medium font-sans text-left border-b-2 border-white/30 pb-1"
           >
             {card.category}
           </motion.p>
-          <motion.p
-            layoutId={layout ? `title-${card.title}` : undefined}
-            className="text-white text-xl md:text-3xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-2"
-          >
-            {card.title}
-          </motion.p>
+          <div className="flex flex-col justify-between">
+            <motion.div
+              layoutId={layout ? `title-${card.title}` : undefined}
+              className="text-white text-xl md:text-3xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-2"
+            >
+              {card.title}
+              <p className="text-sm text-gray-500 pt-1">
+                {card.date} | {card.location}
+              </p>
+            </motion.div>
+            <motion.div className="text-left pt-4 pb-5">
+              <div className="flex items-center gap-x-2 pb-4 overflow-x-hidden">
+                {card.techStack}
+              </div>
+              {card.soundBite}
+            </motion.div>
+          </div>
         </div>
-
         {/* SoundBite Container */}
-        <motion.p className="text-white text-xs md:text-xl font-semibold max-w-xs [text-wrap:balance] font-sans mt-2 absolute bottom-8 md:bottom-16 md:left-8 inset-x-0 text-center z-40 bg-black/40 px-2 md:px-4 py-2 rounded-2xl">
-          {card.soundBite}
-        </motion.p>
+        {/* <motion.p className="text-white text-xs md:text-xl font-semibold max-w-xs font-sans mt-2 inset-x-0 text-center z-40 px-2 md:px-4 py-2 "> */}
 
-        <BlurImage
+        {/* <motion.p className="px-8 flex justify-between text-sm">
+          {card.techStack}
+        </motion.p> */}
+        {/* <BlurImage
           src={card.src}
           alt={card.title}
           fill
           className="object-cover absolute z-10 inset-0"
-        />
+        /> */}
       </motion.button>
     </>
   )

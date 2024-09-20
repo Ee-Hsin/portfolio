@@ -13,8 +13,10 @@ import { IoLogoJavascript, IoLogoFirebase } from "react-icons/io5"
 
 export const workExperience = [
   {
-    category: "Dandelion Networks",
+    category: "Dandelion Networks 📱",
     title: "Mobile Developer",
+    date: "May 2024 - Aug 2024",
+    location: "Toronto",
     src: "/images/iPhone-image.jpg",
     soundBite: "Developed a secure wallet app for blockchain transactions",
     linkedinLink: "https://www.linkedin.com/company/dandelionnetworks/",
@@ -54,7 +56,7 @@ export const workExperience = [
           <span className="bg-blue-100 text-blue-500 px-2 py-1 rounded flex items-center">
             React Native <TbBrandReactNative className="text-blue-500 ml-1" />
           </span>
-          <span className="bg-white text-yellow-500  px-2 py-1 rounded flex items-center">
+          <span className="bg-white text-blue-500  px-2 py-1 rounded flex items-center">
             TypeScript <SiTypescript className="text-blue-500 ml-1" />
           </span>
           <span className="bg-red-100 text-red-500 px-2 py-1 rounded flex items-center">
@@ -69,10 +71,25 @@ export const workExperience = [
         </div>
       </div>
     ),
+    techStack: (
+      <>
+        <span className="bg-blue-100 text-blue-500 px-2 py-1 rounded flex items-center">
+          React Native <TbBrandReactNative className="text-blue-500 ml-1" />
+        </span>
+        <span className="bg-white text-blue-500 px-2 py-1 rounded flex items-center">
+          TypeScript <SiTypescript className="text-blue-500 ml-1" />
+        </span>
+        <span className="bg-red-100 text-red-500 px-2 py-1 rounded flex items-center">
+          Redux <SiRedux className="text-red-500 ml-1" />
+        </span>
+      </>
+    ),
   },
   {
-    category: "UW Blueprint (non-profit)",
+    category: "UW Blueprint (non-profit) 🎗️",
     title: "Project Developer",
+    date: "May 2024 - Present",
+    location: "Waterloo",
     src: "/images/charity-image.jpg",
     linkedinLink: "https://www.linkedin.com/company/uw-blueprint/",
     soundBite: "Building a portal for donation management and impact tracking",
@@ -109,8 +126,11 @@ export const workExperience = [
           <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded flex flex-row justify-center items-center">
             React <FaReact className="text-blue-500 ml-1" />
           </span>
-          <span className="bg-white text-yellow-500  px-2 py-1 rounded flex items-center">
+          <span className="bg-white text-blue-500  px-2 py-1 rounded flex items-center">
             TypeScript <SiTypescript className="text-blue-500 ml-1" />
+          </span>
+          <span className="bg-green-100 text-green-800 px-2 py-1 rounded flex items-center">
+            Node.js <SiNodedotjs className="text-green-500 ml-1" />
           </span>
           <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded flex items-center">
             Prisma ORM <SiPrisma className="text-purple-500 ml-1" />
@@ -124,10 +144,25 @@ export const workExperience = [
         </div>
       </div>
     ),
+    techStack: (
+      <>
+        <span className="bg-blue-100 text-blue-500 px-2 py-1 rounded flex items-center">
+          React <FaReact className="text-blue-500 ml-1" />
+        </span>
+        <span className="bg-white text-blue-500 px-2 py-1 rounded flex items-center">
+          TypeScript <SiTypescript className="text-blue-500 ml-1" />
+        </span>
+        <span className="bg-green-100 text-green-800 px-2 py-1 rounded flex items-center">
+          Node.js <SiNodedotjs className="text-green-500 ml-1" />
+        </span>
+      </>
+    ),
   },
   {
-    category: "Speer Education",
+    category: "Speer Education 🧑‍💻",
     title: "Software Developer",
+    date: "April 2021 - July 2021",
+    location: "Singapore",
     src: "/images/laptop-image.jpg",
     soundBite: "designed a networking app for high-school students",
     content: (
@@ -182,10 +217,28 @@ export const workExperience = [
         </div>
       </div>
     ),
+    techStack: (
+      <>
+        <span className="bg-blue-100 text-blue-500 px-2 py-1 rounded flex items-center">
+          React <FaReact className="text-blue-500 ml-1" />
+        </span>
+        <span className="bg-white text-yellow-600 px-2 py-1 rounded flex items-center">
+          JavaScript <IoLogoJavascript className="text-yellow-500 ml-1" />
+        </span>
+        <span className="bg-green-100 text-green-800 px-2 py-1 rounded flex items-center">
+          Node.js <SiNodedotjs className="text-green-500 ml-1" />
+        </span>
+        {/* <span className="bg-white text-yellow-500 px-2 py-1 rounded flex items-center">
+          and more...
+        </span> */}
+      </>
+    ),
   },
   {
-    category: "Yamada Holdings",
+    category: "Yamada Holdings 🐕",
     title: "Software Developer",
+    date: "Jan 2021 - April 2021",
+    location: "Malaysia",
     src: "/images/pet-image.jpg",
     soundBite: "optimized sales for a B2B Pet supplies distributor",
     content: (
@@ -217,7 +270,7 @@ export const workExperience = [
 
         {/* Skills Row */}
         <div className="mt-4 flex flex-wrap gap-2">
-          <span className="bg-yellow-200 text-blue-800 px-2 py-1 rounded flex items-center">
+          <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded flex items-center">
             Python <FaPython className="text-blue-500 ml-1" />
           </span>
           <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded">
@@ -225,6 +278,13 @@ export const workExperience = [
           </span>
         </div>
       </div>
+    ),
+    techStack: (
+      <>
+        <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded flex items-center">
+          Python <FaPython className="text-blue-500 ml-1" />
+        </span>
+      </>
     ),
   },
 ]
